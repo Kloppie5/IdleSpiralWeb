@@ -1,8 +1,17 @@
 <html>
     <head>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+        <script src="js/savefile.js"></script>
     </head>
     <body>
-        Hello Again~
+        <input type="file" id="loadFileButton" style="display: none;" oninput="onloadfile(event)" />
+        <input type="button" value="Load" onclick="document.getElementById('loadFileButton').click();" />
+        <br />
+        <textarea id="saveFileTextArea" oninput="onsavechanged(event)"></textarea>
+        <br />
+        <textarea id="saverTextArea" disabled="disabled"></textarea>
+        <textarea id="saveTextArea" disabled="disabled"></textarea>
+        <textarea id="dtoTextArea" disabled="disabled"></textarea>
     </body>
 </html>
